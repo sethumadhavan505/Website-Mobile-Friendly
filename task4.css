@@ -1,0 +1,256 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff8f1;
+  color: #3b2f2f;
+}
+
+header {
+  background-color: #492f21;
+  color: #fff;
+  padding: clamp(6px, 2vw, 12px) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: nowrap; 
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 1vw, 10px);
+  font-size: clamp(14px, 2vw, 22px);
+  font-weight: bold;
+}
+
+.logo img {
+  width: clamp(24px, 3vw, 40px);
+  height: clamp(24px, 3vw, 40px);
+  border-radius: 8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: clamp(8px, 1.5vw, 18px);
+  font-size: clamp(12px, 1.2vw, 16px);
+  margin-top: 0;
+  padding: 0;
+  white-space: nowrap; 
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(12px, 1.2vw, 16px);
+  padding: clamp(5px, 1vw, 10px) 0;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f9c784;
+}
+
+
+.hero {
+  padding: 30px 15px;
+  background-color: #fbeee0;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(20px, 4vw, 30px);
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  font-size: clamp(13px, 2vw, 16px);
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #d2691e;
+  color: #fff;
+  padding: clamp(10px, 2vw, 12px) clamp(20px, 4vw, 25px);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.btn:hover {
+  background-color: #a0522d;
+}
+
+.hero-image video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+footer {
+  background-color: #2e1d14;
+  color: #fff;
+  text-align: center;
+  padding: clamp(15px, 3vw, 20px) 15px;
+  font-size: clamp(13px, 2vw, 14px);
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: clamp(15px, 3vw, 25px);
+  margin: 10px 0;
+  flex-wrap: nowrap; 
+}
+
+.social-icons a {
+  color: #f4a261;
+  text-decoration: none;
+  font-size: clamp(14px, 2vw, 16px);
+  transition: transform 0.3s ease, color 0.3s ease;
+  white-space: nowrap; 
+}
+
+.social-icons a i {
+  margin-right: 6px;
+}
+
+.social-icons a:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: row; 
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: row; 
+    gap: clamp(8px, 1.5vw, 12px);
+    width: auto;
+    margin-top: 0;
+  }
+
+  .nav-links a {
+    font-size: clamp(13px, 1.1vw, 15px);
+    padding: clamp(6px, 1vw, 8px) 0;
+  }
+
+  .logo {
+    font-size: clamp(16px, 1.3vw, 20px);
+  }
+
+  .logo img {
+    width: clamp(28px, 2.5vw, 36px);
+    height: clamp(28px, 2.5vw, 36px);
+  }
+
+  .hero-text h1 {
+    font-size: clamp(18px, 3vw, 24px);
+  }
+
+  .hero-text p {
+    font-size: clamp(12px, 1.5vw, 14px);
+  }
+
+  .btn {
+    font-size: clamp(12px, 1.5vw, 14px);
+    padding: clamp(8px, 1.5vw, 10px) clamp(15px, 3vw, 20px);
+  }
+
+  footer {
+    font-size: clamp(12px, 1.5vw, 13px);
+    padding: clamp(10px, 2vw, 15px) 10px;
+  }
+
+  .social-icons {
+    gap: clamp(10px, 2vw, 15px);
+  }
+
+  .social-icons a {
+    font-size: clamp(12px, 1.5vw, 14px);
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-text h1 {
+    font-size: clamp(16px, 4vw, 20px);
+  }
+
+  .hero-text p {
+    font-size: clamp(11px, 3vw, 13px);
+  }
+
+  .nav-links a {
+    font-size: clamp(12px, 2vw, 14px);
+    padding: clamp(5px, 1vw, 7px) 0;
+  }
+
+  .logo {
+    font-size: clamp(14px, 2vw, 18px);
+  }
+
+  .logo img {
+    width: clamp(24px, 3vw, 30px);
+    height: clamp(24px, 3vw, 30px);
+  }
+
+  header {
+    padding: clamp(6px, 2vw, 8px) 0;
+  }
+
+  footer {
+    font-size: clamp(11px, 3vw, 12px);
+    padding: clamp(8px, 3vw, 10px) 8px;
+  }
+
+  .social-icons {
+    gap: clamp(8px, 2vw, 10px);
+  }
+
+  .social-icons a {
+    font-size: clamp(11px, 3vw, 13px);
+  }
+}
